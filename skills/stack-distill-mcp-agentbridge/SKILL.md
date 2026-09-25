@@ -1,21 +1,22 @@
 ---
 name: stack-distill-mcp-agentbridge
-description: Full stack orientation for AgentBridge MCP + Manus + launch. Live v1.3.1+ /health /eval user.me probes, finish mode, tools_free/paid, research dry_run loop.
+description: Full stack orientation AgentBridge MCP + Manus + launch + imprint. Live v1.3.1+ /health /eval, imprint wall, public gist, finish mode.
 ---
 
 # Stack distill
 
-Live health: https://manus-mcp-bridge-olive.vercel.app/health
-Live eval: https://manus-mcp-bridge-olive.vercel.app/eval
+Live: https://manus-mcp-bridge-olive.vercel.app/health
+Eval: https://manus-mcp-bridge-olive.vercel.app/eval
 Landing: https://agentbridge-launch.vercel.app
+Imprint: https://agentbridge-launch.vercel.app/imprint.html
 
-Cross-links: deployment-automation, api-key-management, autoresearch, mcp-http-bridge, manus-api, agentbridge-launch.
+Cross-links: deployment-automation, api-key-management, autoresearch, mcp-http-bridge, manus-api, agentbridge-launch, agentbridge-marketing.
 
 ## Research loop
-experiment → synthesize → steer. Default dry_run=true. loop_cap 5 force synthesize. stop freezes create_task.
+experiment → synthesize → steer. dry_run default. loop_cap 5.
 
 ## Degrade
-0 paid, 2 low throttle, 3 key rejected, 4 empty/no key local finish.
+0 paid · 2 low throttle · 3 key rejected · 4 empty finish.
 
-## Honest scope
-remaining_creates is instance-best-effort until shared KV. Do not sell KV on $99 until store exists.
+## Marketing
+Outside imprint = public gist + imprint wall. No fake proof.
