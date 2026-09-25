@@ -1,22 +1,24 @@
 ---
 name: agentbridge-marketing
-description: Honest marketing for AgentBridge. Outside imprint wall, public gist one-pager, no fake testimonials, no bought leads, no pretend KV. Cross-links agentbridge-launch, stack-distill, autoresearch.
+description: Honest marketing AgentBridge. Outside imprint wall, public one-pager, imprint feed, no fake testimonials, no bought leads, no pretend KV.
 ---
 
 # AgentBridge marketing
 
-## Goal
-At least one outside unique imprint: public gist URL and/or a stranger imprint issue.
+## Win condition
+One stranger imprint (issue not titled ops/seed/share-vector) OR sustained outside share of IMPRINT-ONE-PAGER.md.
+
+## Live URLs
+- Landing: https://agentbridge-launch.vercel.app
+- Wall: https://agentbridge-launch.vercel.app/imprint
+- One-pager: https://github.com/cantgetalonggta-png/mcp-stack-deploy/blob/main/IMPRINT-ONE-PAGER.md
+- Eval: https://manus-mcp-bridge-olive.vercel.app/eval
 
 ## Rules
-- Never invent case studies, logos, or revenue numbers.
-- Never sell KV on $99 until a shared store exists.
+- Never invent case studies, logos, revenue, or stranger quotes.
+- Ops seed issues must say ops/seed/share-vector in the title.
+- Never sell KV on $99 until shared store exists.
 - Always point to live /health and /eval.
-- Imprint wall: imprint.html opens GitHub issue label imprint (human confirms).
-- Public gist: AGENTBRIDGE-HONEST-ONE-PAGER.md
-
-## Channels allowed
-Honest share of gist + landing. No email scraping. No bot farms. No fake social proof.
 
 ## Copy spine
 Hose + lock + live user.me + public eval. Not Zapier. Not an LLM. Keys you own.

@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>AgentBridge Imprint Wall</title>
-<style>body{margin:0;font-family:system-ui;background:#0B1220;color:#e2e8f0}a{color:#14B8A6}.wrap{max-width:640px;margin:0 auto;padding:2rem 1.25rem}h1{font-size:1.6rem}.card{background:#111827;border:1px solid #334155;border-radius:.7rem;padding:1.25rem;margin:1rem 0}label{display:block;margin:.5rem 0 .2rem;font-size:.85rem;opacity:.9}input,textarea{width:100%;padding:.6rem;border-radius:.4rem;border:1px solid #334155;background:#0f172a;color:#fff;box-sizing:border-box}button{margin-top:.8rem;background:#F59E0B;border:0;font-weight:800;padding:.75rem 1.2rem;border-radius:.4rem;cursor:pointer;width:100%}.note{font-size:.8rem;opacity:.75;margin-top:1rem}code{background:#1e293b;padding:.1rem .35rem;border-radius:.25rem}</style></head><body>
+<style>body{margin:0;font-family:system-ui;background:#0B1220;color:#e2e8f0}a{color:#14B8A6}.wrap{max-width:640px;margin:0 auto;padding:2rem 1.25rem}h1{font-size:1.6rem}.card{background:#111827;border:1px solid #334155;border-radius:.7rem;padding:1.25rem;margin:1rem 0}label{display:block;margin:.5rem 0 .2rem;font-size:.85rem;opacity:.9}input,textarea{width:100%;padding:.6rem;border-radius:.4rem;border:1px solid #334155;background:#0f172a;color:#fff;box-sizing:border-box}button{margin-top:.8rem;background:#F59E0B;border:0;font-weight:800;padding:.75rem 1.2rem;border-radius:.4rem;cursor:pointer;width:100%}.note{font-size:.8rem;opacity:.75;margin-top:1rem}code{background:#1e293b;padding:.1rem .35rem;border-radius:.25rem}#feed{font-size:.85rem}#feed li{margin:.4rem 0;padding:.5rem;background:#0f172a;border-radius:.4rem;list-style:none}.ops{opacity:.6;font-size:.75rem}</style></head><body>
 <div class="wrap">
-<p><a href="/">← AgentBridge</a> · <a href="https://manus-mcp-bridge-olive.vercel.app/eval" target="_blank" rel="noopener">/eval</a></p>
+<p><a href="/">← AgentBridge</a> · <a href="https://manus-mcp-bridge-olive.vercel.app/eval" target="_blank" rel="noopener">/eval</a> · <a href="https://github.com/cantgetalonggta-png/mcp-stack-deploy/blob/main/IMPRINT-ONE-PAGER.md" target="_blank" rel="noopener">one-pager</a></p>
 <h1>Imprint wall</h1>
 <p>One honest outside mark. Leave a sentence if you own keys and the hose idea is useful. Opens a real public GitHub issue labeled <code>imprint</code>. No fake case studies. No secrets.</p>
 <div class="card">
@@ -14,7 +14,12 @@
 <label style="display:flex;gap:.5rem;align-items:center"><input required type="checkbox" name="human" style="width:auto"/> I am not a bot spam farm</label>
 <button type="submit">Leave imprint (opens GitHub)</button>
 </form>
-<p class="note">This does not auto-post without you. GitHub opens with a prefilled issue. That is the honest mark — you confirm. Outside unique gist: see landing.</p>
+<p class="note">GitHub opens prefilled — you confirm. That is the honest mark. Ops seed issues are labeled and do not count as stranger imprints.</p>
+</div>
+<div class="card">
+<strong>Public imprint feed</strong>
+<ul id="feed"><li>loading…</li></ul>
+<p class="ops">Ops/scaffolding issues say so in the title. Stranger imprints are the scoreboard.</p>
 </div>
 <div class="card">
 <strong>What you are imprinting on</strong>
@@ -31,4 +36,10 @@ function leaveImprint(e){
  window.open('https://github.com/cantgetalonggta-png/mcp-stack-deploy/issues/new?title='+encodeURIComponent(title)+'&body='+encodeURIComponent(body)+'&labels=imprint','_blank');
  return false;
 }
+fetch('https://api.github.com/repos/cantgetalonggta-png/mcp-stack-deploy/issues?labels=imprint&state=open&per_page=10')
+ .then(r=>r.json()).then(list=>{
+  const ul=document.getElementById('feed');
+  if(!Array.isArray(list)||!list.length){ul.innerHTML='<li>No open imprint issues yet. Be the first stranger.</li>';return;}
+  ul.innerHTML=list.map(i=>'<li><a href="'+i.html_url+'" target="_blank" rel="noopener">#'+i.number+' '+i.title+'</a></li>').join('');
+ }).catch(()=>{document.getElementById('feed').innerHTML='<li>Feed unavailable — open GitHub issues labeled imprint.</li>';});
 </script></body></html>
