@@ -1,129 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AgentBridge Launch — Custom MCP in days, not months</title>
-<meta name="description" content="Production MCP gateways for Claude, Cursor, Codex & Grok. Skip months of glue. Live Manus-proven stack. From $1,499."/>
-<style>
-:root{--navy:#0B1220;--teal:#14B8A6;--gold:#F59E0B;--bg:#F1F5F9;--card:#fff;--muted:#64748B;--slate:#334155}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--slate);line-height:1.55}
-a{color:var(--teal)}header{background:linear-gradient(135deg,var(--navy),#1e293b);color:#fff;padding:3rem 1.25rem 2.5rem;text-align:center}
-header h1{margin:0 0 .5rem;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.02em}
-header p{max-width:40rem;margin:.4rem auto 1.25rem;opacity:.9}
-.badge{display:inline-block;background:rgba(20,184,166,.2);border:1px solid var(--teal);color:#99f6e4;padding:.25rem .7rem;border-radius:999px;font-size:.8rem;margin-bottom:1rem}
-.btn{display:inline-block;background:var(--teal);color:#042f2e;font-weight:700;text-decoration:none;padding:.75rem 1.25rem;border-radius:.6rem;margin:.25rem}
-.btn.secondary{background:transparent;border:1px solid #94a3b8;color:#e2e8f0}
-.wrap{max-width:960px;margin:0 auto;padding:1.5rem 1.25rem}
-.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--card);border-radius:.85rem;padding:1.15rem 1.2rem;box-shadow:0 1px 2px rgba(15,23,42,.06);border:1px solid #e2e8f0}
-.card h3{margin:.1rem 0 .5rem;color:var(--navy);font-size:1.05rem}
-.price{font-size:1.6rem;font-weight:800;color:var(--navy)}.price span{font-size:.9rem;font-weight:600;color:var(--muted)}
-ul.clean{padding-left:1.1rem;margin:.4rem 0}ul.clean li{margin:.25rem 0}
-.cta-band{background:var(--navy);color:#fff;padding:2rem 1.25rem;text-align:center;margin-top:2rem}
-form{display:grid;gap:.65rem;max-width:420px;margin:1rem auto 0;text-align:left}
-label{font-size:.85rem;color:#cbd5e1}input,textarea,select{width:100%;padding:.65rem .7rem;border-radius:.5rem;border:1px solid #334155;background:#0f172a;color:#f8fafc}
-button{background:var(--gold);border:0;font-weight:800;padding:.8rem 1rem;border-radius:.55rem;cursor:pointer;color:#1c1917}
-footer{text-align:center;padding:2rem 1rem;font-size:.8rem;color:var(--muted)}
-.live{font-family:ui-monospace,monospace;font-size:.78rem;background:#0f172a;color:#5eead4;padding:.5rem .7rem;border-radius:.4rem;display:inline-block;margin-top:.5rem}
-</style>
-</head>
-<body>
-<header>
-  <div class="badge">SKU #1 · MCP shop · proven live stack</div>
-  <h1>AgentBridge Launch</h1>
-  <p>Your API becomes tools for Claude, Cursor, Codex &amp; Grok — <strong>in days, not months</strong>. We productized a real production MCP gateway so you buy the outcome, not a research project.</p>
-  <a class="btn" href="#buy">Get a build slot</a>
-  <a class="btn secondary" href="https://manus-mcp-bridge-olive.vercel.app/health" target="_blank" rel="noopener">See live demo /health</a>
-  <div class="live">demo: manus-mcp-bridge · v1.1.0 · 12 tools · Bearer auth · Vercel</div>
-</header>
-
-<section class="wrap">
-  <h2 style="color:var(--navy)">Why people buy this instead of building it</h2>
-  <div class="grid">
-    <div class="card"><h3>Months of glue → days</h3><p>Auth, schemas, allowlists, deploy, health, client JSON, secret handling — the boring parts every MCP needs. Agency custom MCP work runs $1.2k–$6k and weeks of calendar. We sell a fixed path off a stack that already ships.</p></div>
-    <div class="card"><h3>Keys never leave the server</h3><p>Clients get a bridge token. Upstream API keys stay encrypted on Vercel. Allowlisted paths block open-proxy accidents. This is the difference between a demo and something you can hand a customer.</p></div>
-    <div class="card"><h3>Agent-ready tool surface</h3><p>Typed tools with inputSchema so agents discover what they can call. First-class wrappers (create task, list projects, …) plus a safe proxy for advanced paths. Works with any MCP HTTP client.</p></div>
-  </div>
-</section>
-
-<section class="wrap">
-  <h2 style="color:var(--navy)">Every component that makes it work</h2>
-  <div class="grid">
-    <div class="card"><h3>1. Auth gate</h3><p><code>Authorization: Bearer</code> bridge token. Missing → 401. Wrong → 403.</p></div>
-    <div class="card"><h3>2. Tool catalogue</h3><p>GET/POST <code>/mcp</code> returns name, description, JSON Schema.</p></div>
-    <div class="card"><h3>3. First-class tools</h3><p>Named ops map cleanly to agent intents (create, list, detail, stop…).</p></div>
-    <div class="card"><h3>4. Allowlisted proxy</h3><p>Only approved API prefixes (e.g. <code>/v2/*</code>). No path traversal.</p></div>
-    <div class="card"><h3>5. Upstream injection</h3><p>Server adds your API header (e.g. <code>x-manus-api-key</code>). Client never holds it.</p></div>
-    <div class="card"><h3>6. Health plane</h3><p><code>/health</code> version, flags, tool names — for ops &amp; self-healing.</p></div>
-    <div class="card"><h3>7. Vercel deploy</h3><p>Serverless HTTPS, git-driven, no Codespace quota dependency.</p></div>
-    <div class="card"><h3>8. Research hooks</h3><p>Optional experiment → synthesize → steer for autonomous loops.</p></div>
-    <div class="card"><h3>9. Client pack</h3><p>Copy-paste MCP servers JSON + docs for Claude/Cursor/Codex.</p></div>
-    <div class="card"><h3>10. Delivery path</h3><p>GitHub monorepo pattern + encrypted env — repeatable per customer API.</p></div>
-  </div>
-</section>
-
-<section class="wrap">
-  <h2 style="color:var(--navy)">Packages</h2>
-  <div class="grid">
-    <div class="card"><div class="price">$1,499 <span>Starter</span></div><ul class="clean"><li>1–2 tools</li><li>~5 day delivery</li><li>Deployed endpoint + health</li></ul></div>
-    <div class="card" style="border-color:var(--teal);box-shadow:0 0 0 2px rgba(20,184,166,.25)"><div class="price">$2,499 <span>Standard</span></div><ul class="clean"><li>5–10 tools + auth</li><li>~2 week delivery</li><li>Client JSON + docs + 30-day fixes</li></ul></div>
-    <div class="card"><div class="price">$99 <span>/mo hosted</span></div><ul class="clean"><li>We host the bridge</li><li>Token rotation help</li><li>Cancel anytime</li></ul></div>
-  </div>
-  <p style="font-size:.9rem;color:var(--muted)">Not a Manus reseller — bring your own API keys. Multi-system enterprise orchestration quoted separately ($6k–$12k market band).</p>
-</section>
-
-<section class="wrap">
-  <h2 style="color:var(--navy)">Proof</h2>
-  <div class="card">
-    <p>Live Manus-aligned bridge (reference implementation of this product pattern):</p>
-    <p><a href="https://manus-mcp-bridge-olive.vercel.app/health" target="_blank" rel="noopener">https://manus-mcp-bridge-olive.vercel.app/health</a></p>
-    <p style="font-size:.9rem">Aligned with official Manus API docs index: <a href="https://open.manus.ai/docs/llms.txt" target="_blank" rel="noopener">open.manus.ai/docs/llms.txt</a> — auth via <code>x-manus-api-key</code>, base <code>https://api.manus.ai</code>.</p>
-    <p style="font-size:.9rem">Brochure PDF + 90-second infomercial MP3 ship with the product pack.</p>
-  </div>
-</section>
-
-<section class="cta-band" id="buy">
-  <h2 style="margin-top:0">Reserve a build slot — leads open as GitHub issues</h2>
-  <p style="opacity:.85;max-width:36rem;margin:0 auto">Submit below. We open a labeled <strong>lead</strong> issue on the public product repo so pipeline is transparent and you keep a paper trail.</p>
-  <form id="lead" onsubmit="return submitLead(event)">
-    <label>Name<input required name="name" placeholder="Alex Founder"/></label>
-    <label>Email<input required type="email" name="email" placeholder="you@company.com"/></label>
-    <label>Company<input name="company" placeholder="Acme AI"/></label>
-    <label>Package
-      <select name="package">
-        <option>Starter $1,499</option>
-        <option selected>Standard $2,499</option>
-        <option>Hosted $99/mo</option>
-        <option>Enterprise quote</option>
-      </select>
-    </label>
-    <label>What API should agents call?<textarea required name="api" rows="3" placeholder="e.g. our REST CRM at api.example.com — list contacts, create ticket"></textarea></label>
-    <button type="submit">Open lead issue →</button>
-  </form>
-  <p style="font-size:.8rem;opacity:.7;margin-top:1rem">Opens GitHub with a prefilled issue. No spam bots get a free API. You stay in control.</p>
-</section>
-
-<footer>
-  AgentBridge Launch · productized MCP gateway · BYO keys · not affiliated with Anthropic, OpenAI, or Manus · © 2026
-</footer>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>AgentBridge Launch</title><meta http-equiv="Cache-Control" content="no-store"/>
+<style>:root{--navy:#0B1220;--teal:#14B8A6;--gold:#F59E0B;--bg:#F1F5F9}body{margin:0;font-family:system-ui,sans-serif;background:var(--bg);color:#334155;line-height:1.55}header{background:linear-gradient(135deg,var(--navy),#1e293b);color:#fff;padding:3rem 1.25rem;text-align:center}.btn{display:inline-block;background:var(--teal);color:#042f2e;font-weight:700;text-decoration:none;padding:.75rem 1.25rem;border-radius:.6rem;margin:.25rem}.wrap{max-width:960px;margin:0 auto;padding:1.5rem}.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.card{background:#fff;border-radius:.85rem;padding:1.15rem;border:1px solid #e2e8f0}.cta-band{background:var(--navy);color:#fff;padding:2rem 1.25rem;text-align:center}form{display:grid;gap:.65rem;max-width:420px;margin:1rem auto;text-align:left}label{font-size:.85rem;color:#cbd5e1}input,textarea,select{width:100%;padding:.65rem;border-radius:.5rem;border:1px solid #334155;background:#0f172a;color:#f8fafc}button{background:var(--gold);border:0;font-weight:800;padding:.8rem;border-radius:.55rem}.chip{display:inline-flex;align-items:center;gap:.45rem;border-radius:999px;padding:.35rem .8rem;font-family:ui-monospace,monospace;font-size:.78rem;margin-top:.7rem;border:1px solid #334155;background:#0f172a}.dot{width:.65rem;height:.65rem;border-radius:50%;background:#94a3b8}.chip.green .dot{background:#22c55e}.chip.yellow .dot{background:#eab308}.chip.red .dot{background:#ef4444}.banner{display:none;margin:1rem auto;max-width:720px;padding:.7rem 1rem;border-radius:.5rem}.banner.show{display:block}</style></head><body>
+<header><div>SKU #1 · live v1.3 probes</div><h1>AgentBridge Launch</h1>
+<p>Custom MCP in days, not months. Orchestrate only with keys you own.</p>
+<a class="btn" href="#buy">Get a build slot</a>
+<a class="btn" href="https://manus-mcp-bridge-olive.vercel.app/health" target="_blank">Live /health</a>
+<div id="chip" class="chip gray"><span class="dot"></span><span id="chipText">probe…</span></div>
+<div id="banner" class="banner"></div></header>
+<section class="wrap"><div class="grid">
+<div class="card"><h3>Glue in days</h3><p>Auth, allowlist, health that calls user.me.</p></div>
+<div class="card"><h3>Keys on server</h3><p>Bridge token in front.</p></div>
+<div class="card"><h3>Finish mode</h3><p>Paid verbs pause. GitHub/Vercel still run.</p></div>
+</div></section>
+<section class="cta-band" id="buy"><h2>Reserve a slot</h2>
+<form onsubmit="return submitLead(event)">
+<label>Name<input required name="name"/></label>
+<label>Email<input required type="email" name="email"/></label>
+<label>Package<select name="package"><option>Starter $1,499</option><option selected>Standard $2,499</option><option>Hosted $99/mo</option></select></label>
+<label>Stuck probe?<select name="probe"><option value="">none</option><option>health</option><option>user.me</option><option>credits</option><option>client json</option></select></label>
+<label>API<textarea required name="api" rows="3"></textarea></label>
+<label style="display:flex;gap:.5rem"><input required type="checkbox" name="ownkeys" style="width:auto"/> I own these API keys.</label>
+<button type="submit">Open lead issue</button></form></section>
 <script>
-function submitLead(e){
-  e.preventDefault();
-  const f=e.target;
-  const title=encodeURIComponent('[lead] '+f.package.value+' — '+(f.company.value||f.name.value));
-  const body=encodeURIComponent(
-    '## Lead (AgentBridge Launch)\n\n'+
-    '- **Name:** '+f.name.value+'\n'+
-    '- **Email:** '+f.email.value+'\n'+
-    '- **Company:** '+(f.company.value||'—')+'\n'+
-    '- **Package:** '+f.package.value+'\n'+
-    '- **API / tools needed:**\n\n'+f.api.value+'\n\n'+
-    '---\nSubmitted from product landing. Label: lead'
-  );
-  window.open('https://github.com/cantgetalonggta-png/mcp-stack-deploy/issues/new?title='+title+'&body='+body+'&labels=lead','_blank');
-  return false;
-}
-</script>
-</body>
-</html>
+fetch('https://manus-mcp-bridge-olive.vercel.app/health?ts='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{
+ const chip=document.getElementById('chip');
+ const color=j.chip||((j.user_me_ok&&j.credits_ok)?'green':'gray');
+ chip.className='chip '+color;
+ document.getElementById('chipText').textContent='v'+j.version+' · user.me '+(j.user_me_status||'?')+' · credits '+(j.credits_ok?'ok':'no')+' · '+color;
+ const b=document.getElementById('banner');
+ if(j.degrade_level>=4){b.className='banner show';b.textContent='Paid hose paused. Finish local.';}
+ else if(j.degrade_level>=2){b.className='banner show';b.textContent='Throttle: prefer sendMessage.';}
+}).catch(()=>{document.getElementById('chipText').textContent='probe unknown · gray';});
+function submitLead(e){e.preventDefault();const f=e.target;if(!f.ownkeys.checked){alert('Check that you own the keys.');return false;}
+ const title=encodeURIComponent('[lead] '+f.package.value+' — '+f.name.value);
+ const body=encodeURIComponent('Name: '+f.name.value+'\nEmail: '+f.email.value+'\nPackage: '+f.package.value+'\nStuck probe: '+(f.probe.value||'none')+'\nOwns keys: yes\nAPI:\n'+f.api.value+'\n\nOrchestrate only with keys you own.');
+ window.open('https://github.com/cantgetalonggta-png/mcp-stack-deploy/issues/new?title='+title+'&body='+body+'&labels=lead','_blank');return false;}
+</script></body></html>
