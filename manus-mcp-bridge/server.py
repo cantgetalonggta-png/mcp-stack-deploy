@@ -19,7 +19,7 @@ app = FastAPI(title="Manus MCP Bridge", version="1.0.0")
 
 BRIDGE_TOKEN = os.environ.get("BRIDGE_TOKEN", "")
 MANUS_API_KEY = os.environ.get("MANUS_API_KEY", "")
-MANUS_API_BASE = os.environ.get("MANUS_API_BASE", "https://api.manus.im")  # override if needed
+MANUS_API_BASE = os.environ.get("MANUS_API_BASE", "https://api.manus.ai")  # official base
 HOST = os.environ.get("HOST", "0.0.0.0")
 PORT = int(os.environ.get("PORT", "8000"))
 
@@ -130,9 +130,10 @@ async def manus_status():
         return status
     try:
         async with httpx.AsyncClient(timeout=15.0) as client:
+            # Manus API key auth: x-manus-api-key (not Bearer)
             r = await client.get(
-                f"{MANUS_API_BASE.rstrip('/')}/v1/health",
-                headers={"Authorization": f"Bearer {MANUS_API_KEY}"},
+                f"{MANUS_API_BASE.rstrip('/')}/v2/user.me",
+                headers={"x-manus-api-key": MANUS_API_KEY},
             )
             status["manus_http"] = r.status_code
             status["manus_body"] = r.text[:500]
@@ -151,7 +152,7 @@ async def manus_proxy(args: dict[str, Any]):
         r = await client.request(
             method,
             url,
-            headers={"Authorization": f"Bearer {MANUS_API_KEY}"},
+            headers={"x-manus-api-key": MANUS_API_KEY, "Content-Type": "application/json"},
             json=args.get("json"),
         )
         return {
