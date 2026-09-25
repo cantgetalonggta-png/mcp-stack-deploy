@@ -11,7 +11,8 @@
 <div id="tip"></div></header>
 <section class="wrap">
 <div class="card imprint"><h3>Outside unique imprint</h3>
-<p>Public honest one-pager (Gist): <a id="gistLink" href="#" target="_blank" rel="noopener">loading…</a></p>
+<p>Public one-pager on GitHub (unique URL):<br/>
+<a href="https://github.com/cantgetalonggta-png/mcp-stack-deploy/blob/main/IMPRINT-ONE-PAGER.md" target="_blank" rel="noopener">github.com/…/IMPRINT-ONE-PAGER.md</a></p>
 <p>Or leave a one-sentence mark on the <a href="imprint.html">imprint wall</a> (opens a real GitHub issue labeled imprint — you confirm).</p>
 <p style="font-size:.85rem;opacity:.85">Zero fake testimonials. Zero bought leads. One stranger sentence beats a thousand choir tapes.</p></div>
 <div class="card"><h3>What it is</h3><p>Bearer MCP gateway, allowlisted upstream, health that calls user.me, public /eval, finish mode when paid verbs must pause. Free verbs stay. Codespace URL is retired.</p></div>
@@ -28,12 +29,6 @@
 <label style="display:flex;gap:.5rem"><input required type="checkbox" name="ownkeys" style="width:auto"/> I own these keys</label>
 <button>Open lead</button></form></section>
 <script>
-const GIST='https://gist.github.com/cantgetalonggta-png';
-fetch('https://api.github.com/users/cantgetalonggta-png/gists').then(r=>r.json()).then(list=>{
- const g=(list||[]).find(x=>(x.description||'').toLowerCase().includes('agentbridge')||(x.files&&Object.keys(x.files).some(f=>f.includes('AGENTBRIDGE'))));
- const a=document.getElementById('gistLink');
- if(g){a.href=g.html_url;a.textContent=g.html_url;} else {a.href='https://gist.github.com/cantgetalonggta-png';a.textContent='gist.github.com/cantgetalonggta-png (search AgentBridge)';}
-}).catch(()=>{document.getElementById('gistLink').textContent='gist.github.com/cantgetalonggta-png';});
 fetch('https://manus-mcp-bridge-olive.vercel.app/health?ts='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{
  const color=j.chip||'gray';
  document.getElementById('chip').className='chip '+color;
