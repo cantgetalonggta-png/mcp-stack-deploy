@@ -1,0 +1,26 @@
+name: Product lead
+description: AgentBridge Launch sales lead
+title: "[lead] "
+labels: ["lead"]
+body:
+  - type: input
+    id: email
+    attributes:
+      label: Email
+    validations:
+      required: true
+  - type: dropdown
+    id: package
+    attributes:
+      label: Package
+      options:
+        - Starter $1,499
+        - Standard $2,499
+        - Hosted $99/mo
+        - Enterprise quote
+  - type: textarea
+    id: api
+    attributes:
+      label: API / tools needed
+    validations:
+      required: true

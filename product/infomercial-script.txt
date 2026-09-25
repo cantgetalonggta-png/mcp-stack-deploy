@@ -1,0 +1,28 @@
+AgentBridge Launch — ninety second product story.
+
+Stop burning months so Claude or Cursor can talk to your API.
+
+Most teams underestimate the glue. Authentication. Tool schemas. Rate limits. Secret handling. Health checks. Deploy. Client config. That is not a weekend hack — it is six to twelve weeks of calendar, and every week your agents stay blind.
+
+AgentBridge Launch sells the outcome: a production MCP gateway for your API, live in days — not months.
+
+Here is every piece that makes it work.
+
+One: a Bearer token gate. Clients never hold your real API key.
+Two: a typed tool catalogue so agents discover what they can call.
+Three: first-class tools that map intent to clean operations — create, list, detail, stop.
+Four: an allowlisted proxy so you do not accidentally ship an open proxy.
+Five: upstream key injection from encrypted environment variables on Vercel.
+Six: a health endpoint with version and tool list for ops.
+Seven: serverless deploy — git push to HTTPS, no Codespace quota drama.
+Eight: optional research hooks — experiment, synthesize, steer.
+Nine: a client pack — copy-paste MCP JSON for Claude, Cursor, and Codex.
+Ten: a repeatable delivery path so the next customer is not a rewrite.
+
+We proved the pattern on a live Manus-aligned bridge — twelve tools, version one point one, production on Vercel, official API auth. Docs index at open.manus.ai.
+
+Pricing is simple. Starter at fourteen ninety-nine. Standard custom at twenty-four ninety-nine. Hosted bridge at ninety-nine a month. Enterprise orchestration quoted.
+
+You are not buying vaporware. You are buying time — and a gateway that already works.
+
+Reserve a build slot. Open a lead. Get agents that can actually touch your stack.
