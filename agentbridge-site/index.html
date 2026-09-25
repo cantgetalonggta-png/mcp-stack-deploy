@@ -1,38 +1,32 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>AgentBridge Launch</title><meta http-equiv="Cache-Control" content="no-store"/>
-<style>:root{--navy:#0B1220;--teal:#14B8A6;--gold:#F59E0B;--bg:#F1F5F9}body{margin:0;font-family:system-ui,sans-serif;background:var(--bg);color:#334155;line-height:1.55}header{background:linear-gradient(135deg,var(--navy),#1e293b);color:#fff;padding:3rem 1.25rem;text-align:center}.btn{display:inline-block;background:var(--teal);color:#042f2e;font-weight:700;text-decoration:none;padding:.75rem 1.25rem;border-radius:.6rem;margin:.25rem}.wrap{max-width:960px;margin:0 auto;padding:1.5rem}.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.card{background:#fff;border-radius:.85rem;padding:1.15rem;border:1px solid #e2e8f0}.cta-band{background:var(--navy);color:#fff;padding:2rem 1.25rem;text-align:center}form{display:grid;gap:.65rem;max-width:420px;margin:1rem auto;text-align:left}label{font-size:.85rem;color:#cbd5e1}input,textarea,select{width:100%;padding:.65rem;border-radius:.5rem;border:1px solid #334155;background:#0f172a;color:#f8fafc}button{background:var(--gold);border:0;font-weight:800;padding:.8rem;border-radius:.55rem}.chip{display:inline-flex;align-items:center;gap:.45rem;border-radius:999px;padding:.35rem .8rem;font-family:ui-monospace,monospace;font-size:.78rem;margin-top:.7rem;border:1px solid #334155;background:#0f172a}.dot{width:.65rem;height:.65rem;border-radius:50%;background:#94a3b8}.chip.green .dot{background:#22c55e}.chip.yellow .dot{background:#eab308}.chip.red .dot{background:#ef4444}.banner{display:none;margin:1rem auto;max-width:720px;padding:.7rem 1rem;border-radius:.5rem}.banner.show{display:block}</style></head><body>
-<header><div>SKU #1 · live v1.3 probes</div><h1>AgentBridge Launch</h1>
-<p>Custom MCP in days, not months. Orchestrate only with keys you own.</p>
-<a class="btn" href="#buy">Get a build slot</a>
-<a class="btn" href="https://manus-mcp-bridge-olive.vercel.app/health" target="_blank">Live /health</a>
-<div id="chip" class="chip gray"><span class="dot"></span><span id="chipText">probe…</span></div>
-<div id="banner" class="banner"></div></header>
-<section class="wrap"><div class="grid">
-<div class="card"><h3>Glue in days</h3><p>Auth, allowlist, health that calls user.me.</p></div>
-<div class="card"><h3>Keys on server</h3><p>Bridge token in front.</p></div>
-<div class="card"><h3>Finish mode</h3><p>Paid verbs pause. GitHub/Vercel still run.</p></div>
-</div></section>
-<section class="cta-band" id="buy"><h2>Reserve a slot</h2>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>AgentBridge Launch</title>
+<style>body{margin:0;font-family:system-ui;background:#F1F5F9;color:#334155}header{background:#0B1220;color:#fff;padding:3rem 1.25rem;text-align:center}.btn{display:inline-block;background:#14B8A6;color:#042f2e;font-weight:700;text-decoration:none;padding:.7rem 1.1rem;border-radius:.5rem;margin:.25rem}.wrap{max-width:960px;margin:0 auto;padding:1.5rem}.card{background:#fff;padding:1rem;border:1px solid #e2e8f0;border-radius:.7rem;margin:.5rem 0}.cta-band{background:#0B1220;color:#fff;padding:2rem;text-align:center}form{display:grid;gap:.6rem;max-width:420px;margin:1rem auto;text-align:left}input,textarea,select{width:100%;padding:.6rem;background:#0f172a;color:#fff;border:1px solid #334155;border-radius:.4rem}button{background:#F59E0B;border:0;font-weight:800;padding:.8rem}.chip{display:inline-flex;gap:.4rem;align-items:center;margin-top:.7rem;padding:.35rem .8rem;border-radius:999px;background:#0f172a;font-family:ui-monospace,monospace;font-size:.78rem}.dot{width:.6rem;height:.6rem;border-radius:50%;background:#94a3b8}.chip.green .dot{background:#22c55e}.chip.yellow .dot{background:#eab308}.chip.red .dot{background:#ef4444}#tip{font-size:.75rem;opacity:.8;margin-top:.4rem}</style></head><body>
+<header><div>SKU #1 · live probes</div><h1>AgentBridge Launch</h1>
+<p>HTTP MCP glue. Not Zapier. Not an LLM. Orchestrate with keys you own.</p>
+<a class="btn" href="#buy">Get a slot</a>
+<a class="btn" href="compare.html">Market table</a>
+<a class="btn" href="https://manus-mcp-bridge-olive.vercel.app/health">/health</a>
+<div id="chip" class="chip gray" title=""><span class="dot"></span><span id="chipText">probe…</span></div>
+<div id="tip"></div></header>
+<section class="wrap"><div class="card"><h3>Free verbs when the paid hose pauses</h3><p id="free">loading tools_free…</p></div></section>
+<section class="cta-band" id="buy"><h2>Reserve</h2>
 <form onsubmit="return submitLead(event)">
 <label>Name<input required name="name"/></label>
 <label>Email<input required type="email" name="email"/></label>
-<label>Package<select name="package"><option>Starter $1,499</option><option selected>Standard $2,499</option><option>Hosted $99/mo</option></select></label>
+<label>Package<select name="package"><option>Starter $1,499</option><option selected>Standard $2,499</option><option>Hosted $99/mo (eval+KV+webhook)</option></select></label>
 <label>Stuck probe?<select name="probe"><option value="">none</option><option>health</option><option>user.me</option><option>credits</option><option>client json</option></select></label>
-<label>API<textarea required name="api" rows="3"></textarea></label>
-<label style="display:flex;gap:.5rem"><input required type="checkbox" name="ownkeys" style="width:auto"/> I own these API keys.</label>
-<button type="submit">Open lead issue</button></form></section>
+<label>API<textarea required name="api"></textarea></label>
+<label style="display:flex;gap:.5rem"><input required type="checkbox" name="ownkeys" style="width:auto"/> I own these keys</label>
+<button>Open lead</button></form></section>
 <script>
 fetch('https://manus-mcp-bridge-olive.vercel.app/health?ts='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{
- const chip=document.getElementById('chip');
- const color=j.chip||((j.user_me_ok&&j.credits_ok)?'green':'gray');
- chip.className='chip '+color;
- document.getElementById('chipText').textContent='v'+j.version+' · user.me '+(j.user_me_status||'?')+' · credits '+(j.credits_ok?'ok':'no')+' · '+color;
- const b=document.getElementById('banner');
- if(j.degrade_level>=4){b.className='banner show';b.textContent='Paid hose paused. Finish local.';}
- else if(j.degrade_level>=2){b.className='banner show';b.textContent='Throttle: prefer sendMessage.';}
+ const color=j.chip||'gray';
+ document.getElementById('chip').className='chip '+color;
+ document.getElementById('chip').title='tools_free: '+(j.tools_free||[]).join(', ');
+ const hint=j.credits_hint==null?'':(' tank '+j.credits_hint);
+ document.getElementById('chipText').textContent='v'+j.version+' · user.me '+(j.user_me_status||'?')+' · credits '+(j.credits_ok?'ok':'no')+hint+' · '+color;
+ document.getElementById('tip').textContent='Free verbs: '+((j.tools_free||[]).join(', ')||'—');
+ document.getElementById('free').textContent=(j.tools_free||[]).join(', ');
 }).catch(()=>{document.getElementById('chipText').textContent='probe unknown · gray';});
-function submitLead(e){e.preventDefault();const f=e.target;if(!f.ownkeys.checked){alert('Check that you own the keys.');return false;}
- const title=encodeURIComponent('[lead] '+f.package.value+' — '+f.name.value);
- const body=encodeURIComponent('Name: '+f.name.value+'\nEmail: '+f.email.value+'\nPackage: '+f.package.value+'\nStuck probe: '+(f.probe.value||'none')+'\nOwns keys: yes\nAPI:\n'+f.api.value+'\n\nOrchestrate only with keys you own.');
- window.open('https://github.com/cantgetalonggta-png/mcp-stack-deploy/issues/new?title='+title+'&body='+body+'&labels=lead','_blank');return false;}
+function submitLead(e){e.preventDefault();const f=e.target;if(!f.ownkeys.checked)return false;
+ window.open('https://github.com/cantgetalonggta-png/mcp-stack-deploy/issues/new?title='+encodeURIComponent('[lead] '+f.package.value)+'&body='+encodeURIComponent('owns keys: yes\n'+f.api.value)+'&labels=lead');return false;}
 </script></body></html>
