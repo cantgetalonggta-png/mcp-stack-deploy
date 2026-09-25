@@ -1,8 +1,10 @@
-# Four-curl runbook (generated contract)
+# Four curls (v1.3.1+)
 
-1. `curl -sS https://manus-mcp-bridge-olive.vercel.app/health`
-2. Confirm `user_me_status` is 200 and `chip` is green.
-3. Confirm `credits_ok` true.
-4. Dry-run steer: POST /mcp `manus_research_steer` with `dry_run=true`.
+```bash
+curl -sS https://manus-mcp-bridge-olive.vercel.app/health
+curl -sS https://manus-mcp-bridge-olive.vercel.app/eval
+# finish without token must be 401
+curl -sS -o /dev/null -w "%{http_code}\n" https://manus-mcp-bridge-olive.vercel.app/finish
+```
 
-If any fail, do not open a lead. Health is no-store. Gray chip means unknown, never fake green.
+Rule: fail any probe → no lead. remaining_creates_scope=instance-best-effort.

@@ -1,6 +1,6 @@
 # Client pack
 
-Orchestrate only with keys you own. Theft is not a feature.
+Orchestrate only with keys you own.
 
 ```json
 {
@@ -14,10 +14,12 @@ Orchestrate only with keys you own. Theft is not a feature.
 }
 ```
 
-Retired (do not use):
+Retired: ~~https://YOUR-CODESPACE-8000.app.github.dev/mcp~~
 
-~~`https://YOUR-CODESPACE-8000.app.github.dev/mcp`~~ — Codespace hostage. Quota and idle timeout kill the URL.
+Four curls:
+1. GET /health
+2. GET /eval  (must pass:true)
+3. GET /finish without token → 401
+4. dry-run manus_research_steer
 
-Never put `MANUS_API_KEY` in this file. Bridge token only.
-
-Four curls: `/health` → `user_me_status==200` → `credits_ok` → dry-run `manus_research_steer`.
+Never put MANUS_API_KEY in this file.
