@@ -1,0 +1,35 @@
+{
+  "seeing": {
+    "bridge": {
+      "ok": true,
+      "version": "1.3.1",
+      "chip": "green",
+      "user_me_ok": true,
+      "credits_ok": true,
+      "remaining_creates": 3,
+      "remaining_creates_scope": "instance-best-effort",
+      "degrade_label": "paid"
+    },
+    "eval": {
+      "pass": true,
+      "chip": "green",
+      "failed": 0,
+      "version": "1.3.1"
+    },
+    "landing": 200,
+    "imprint_wall": 200,
+    "beta_jsdelivr": 200,
+    "vercel_beta_path": "404 until agentbridge-launch project redeployed with agentbridge-site/beta"
+  },
+  "imprints": {
+    "issue_8": "https://github.com/cantgetalonggta-png/mcp-stack-deploy/issues/8",
+    "unique_file": "https://github.com/cantgetalonggta-png/mcp-stack-deploy/blob/main/UNIQUE_IMPRINT_BETA_0.2.md",
+    "stranger_count": 0,
+    "ops_seeds": [
+      6,
+      7,
+      8
+    ]
+  },
+  "public_beta": "https://cdn.jsdelivr.net/gh/cantgetalonggta-png/mcp-stack-deploy@main/agentbridge-site/beta/index.html"
+}
