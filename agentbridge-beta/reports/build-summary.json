@@ -1,258 +1,91 @@
 {
-  "version": "0.2.0-beta",
-  "skills": [
-    "code-evolution",
-    "comedian-persona-debate",
-    "deployment-automation",
-    "knowledge-base-builder",
-    "multi-agent-tooling",
-    "public-dataset-discovery",
-    "python-pep8-code-reviewer",
-    "self-dev-resources",
-    "rex-export-x5-master",
-    "autoresearch",
-    "api-integration-master",
-    "api-key-management",
-    "llm-orchestration",
-    "metrics-self-healing",
-    "multi-agent-patterns",
-    "multi-agent-project-structure",
-    "mcp-http-bridge",
-    "manus-api",
-    "agentbridge-launch",
-    "stack-distill-mcp-agentbridge"
-  ],
+  "version": "0.3.0-beta",
+  "ts": "2026-09-26T02:58:24.504386+00:00",
   "live": {
     "health": {
       "ok": true,
-      "status": 200,
-      "data": {
-        "ok": true,
-        "service": "manus-mcp-bridge",
-        "version": "1.3.1",
-        "bridge_token_configured": true,
-        "manus_key_configured": true,
-        "user_me_ok": true,
-        "user_me_status": 200,
-        "credits_ok": true,
-        "credits_hint": null,
-        "degrade_level": 0,
-        "degrade_label": "paid",
-        "chip": "green",
-        "tools_free": [
-          "manus_status",
-          "manus_user_me",
-          "manus_task_list",
-          "manus_task_detail",
-          "manus_task_stop",
-          "manus_project_list",
-          "manus_skill_list",
-          "manus_usage_credits",
-          "manus_research_steer",
-          "manus_degrade_status",
-          "manus_plan_sequence",
-          "manus_proxy"
-        ],
-        "tools_paid": [
-          "manus_task_create",
-          "manus_task_send_message"
-        ],
-        "remaining_creates": 3,
-        "remaining_creates_scope": "instance-best-effort",
-        "loop_cap": 5,
-        "key_dead_event": false,
-        "ts": 1790385520,
-        "user_id_present": true,
-        "cache_control": "no-store"
-      }
+      "service": "manus-mcp-bridge",
+      "version": "1.3.1",
+      "bridge_token_configured": true,
+      "manus_key_configured": true,
+      "user_me_ok": true,
+      "user_me_status": 200,
+      "credits_ok": true,
+      "credits_hint": null,
+      "degrade_level": 0,
+      "degrade_label": "paid",
+      "chip": "green",
+      "tools_free": [
+        "manus_status",
+        "manus_user_me",
+        "manus_task_list",
+        "manus_task_detail",
+        "manus_task_stop",
+        "manus_project_list",
+        "manus_skill_list",
+        "manus_usage_credits",
+        "manus_research_steer",
+        "manus_degrade_status",
+        "manus_plan_sequence",
+        "manus_proxy"
+      ],
+      "tools_paid": [
+        "manus_task_create",
+        "manus_task_send_message"
+      ],
+      "remaining_creates": 3,
+      "remaining_creates_scope": "instance-best-effort",
+      "loop_cap": 5,
+      "key_dead_event": false,
+      "ts": 1790391504,
+      "user_id_present": true,
+      "cache_control": "no-store"
     },
     "eval": {
-      "ok": true,
-      "status": 200,
-      "data": {
-        "version": "1.3.1",
-        "failed": 0,
-        "pass": true,
-        "checks": [
-          {
-            "name": "user_me_200",
-            "ok": true
-          },
-          {
-            "name": "credits_ok",
-            "ok": true
-          },
-          {
-            "name": "chip",
-            "ok": true
-          },
-          {
-            "name": "key_configured",
-            "ok": true
-          }
-        ],
-        "chip": "green",
-        "credits_hint": null,
-        "remaining_creates_scope": "instance-best-effort"
-      }
-    },
-    "landing_status": 200,
-    "imprint_status": 200,
-    "eval_pass": true,
-    "chip": "green",
-    "bridge_version": "1.3.1"
+      "version": "1.3.1",
+      "failed": 0,
+      "pass": true,
+      "checks": [
+        {
+          "name": "user_me_200",
+          "ok": true
+        },
+        {
+          "name": "credits_ok",
+          "ok": true
+        },
+        {
+          "name": "chip",
+          "ok": true
+        },
+        {
+          "name": "key_configured",
+          "ok": true
+        }
+      ],
+      "chip": "green",
+      "credits_hint": null,
+      "remaining_creates_scope": "instance-best-effort"
+    }
   },
-  "lint": {
-    "count": 0
-  },
-  "marketing": {
-    "ts": "2026-09-26T01:18:40.821553+00:00",
-    "team": "marketing",
-    "proposals": [
-      {
-        "agent": "HookLead",
-        "title": "Honest hose, not vapor",
-        "action": "Lead with live /eval green chip + remaining_creates honesty",
-        "channel": "landing + imprint wall + X/GitHub",
-        "metric": "CTR to imprint wall",
-        "priority": 1
-      },
-      {
-        "agent": "ChannelScout",
-        "title": "Builder channels only",
-        "action": "Target key owners only (HN, IH, Cursor, MCP dirs)",
-        "channel": "community posts with eval link",
-        "metric": "qualified imprint issues",
-        "priority": 1
-      },
-      {
-        "agent": "ImprintHunter",
-        "title": "One stranger sentence",
-        "action": "Ship wall + one-pager + gist; ask ONE honest sentence",
-        "channel": "imprint wall",
-        "metric": "non-ops imprint count >= 1",
-        "priority": 0
-      },
-      {
-        "agent": "CarlinCritic",
-        "title": "Language audit",
-        "action": "Kill AI-platform fluff. Say hose + lock + live user.me",
-        "channel": "copy rewrite",
-        "metric": "jargon ratio down",
-        "priority": 2
-      },
-      {
-        "agent": "HookLead",
-        "title": "Beta badge",
-        "action": "Publish Beta 0.2 dashboard with skills + debates",
-        "channel": "beta dashboard",
-        "metric": "dashboard uniques",
-        "priority": 1
-      },
-      {
-        "agent": "ChannelScout",
-        "title": "Compare table push",
-        "action": "Surface compare.html vs DIY / agency / multi-source",
-        "channel": "compare page",
-        "metric": "compare -> lead form",
-        "priority": 2
-      }
+  "skills": [],
+  "personas": [],
+  "directives": [],
+  "encyclopedias": null,
+  "imprint": {
+    "stranger_count": 0,
+    "ops_open": [
+      6,
+      7,
+      8
     ],
-    "recommendation": "Prioritize ImprintHunter + live eval proof over brand fluff. One honest outside mark beats ten fake testimonials."
+    "status": "hunting"
   },
-  "sales": {
-    "ts": "2026-09-26T01:18:41.259817+00:00",
-    "team": "product_sales",
-    "proposals": [
-      {
-        "agent": "OfferArchitect",
-        "sku": "Starter",
-        "price": 1499,
-        "include": [
-          "1-2 tools",
-          "client pack",
-          "health plane",
-          "5-day path"
-        ],
-        "exclude": [
-          "raw Manus key access",
-          "unlimited creates",
-          "fake KV"
-        ]
-      },
-      {
-        "agent": "OfferArchitect",
-        "sku": "Standard",
-        "price": 2499,
-        "include": [
-          "5-10 tools",
-          "runbook",
-          "eval gate",
-          "auth allowlist"
-        ],
-        "exclude": [
-          "selling operator credits"
-        ]
-      },
-      {
-        "agent": "OfferArchitect",
-        "sku": "Hosted",
-        "price": 99,
-        "period": "mo",
-        "include": [
-          "uptime",
-          "token rotation help",
-          "eval"
-        ],
-        "note": "Do NOT sell KV until shared store is real"
-      },
-      {
-        "agent": "ObjectionKiller",
-        "objection": "Why not Zapier/n8n?",
-        "rebuttal": "General automation vs HTTP MCP for agent clients with Bearer lock + allowlist + live user.me chip."
-      },
-      {
-        "agent": "ObjectionKiller",
-        "objection": "Can I use your Manus key?",
-        "rebuttal": "No. BYO keys. We sell the hose pattern."
-      },
-      {
-        "agent": "SlotCloser",
-        "action": "Lead form opens GitHub [lead] issue \u2014 24h reply SLA",
-        "cta": "Get a slot on landing #buy"
-      },
-      {
-        "agent": "HonestyGuard",
-        "flags": [
-          "remaining_creates_scope is instance-best-effort until shared KV",
-          "Hosted $99 does not include pretend durable store",
-          "No fabricated case studies on brochure or site",
-          "Ops imprint seeds must not count as stranger imprints"
-        ]
-      }
-    ],
-    "recommendation": "Close on proof (eval green) not hype. Price is fixed-path delivery of gateway pattern."
-  },
-  "research": {
-    "project": "AgentBridge Beta imprint + conversion",
-    "question": "What minimal public proof converts a key-owning builder into one honest imprint?",
-    "hypotheses": [
-      {
-        "id": "H1",
-        "text": "Live /eval green + creates honesty increases imprint rate"
-      },
-      {
-        "id": "H2",
-        "text": "Compare table vs DIY/agency pricing beats feature lists"
-      },
-      {
-        "id": "H3",
-        "text": "Debate archive + beta dashboard signals seriousness"
-      }
-    ],
-    "metric": "non_ops_imprint_count",
-    "baseline": 0,
-    "phase": "bootstrap",
-    "ts": "2026-09-26T01:18:41.672500+00:00"
-  }
+  "debates": [
+    "heated-unhinged-10min",
+    "product-discussion-10min",
+    "helios-zagan-heated-10min",
+    "helios-zagan-product-10min"
+  ],
+  "recommendation": "Stranger imprint is the only outside scoreboard. Encyclopedia pack shipped. Deploy when eval green."
 }

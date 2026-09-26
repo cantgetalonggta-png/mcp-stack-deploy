@@ -1,0 +1,55 @@
+{
+  "ts": "2026-09-26T02:52:42.752105+00:00",
+  "team": "debate-helios-zagan",
+  "proposals": [
+    {
+      "agent": "Helios",
+      "title": "Burn fake testimonials",
+      "action": "Wall honesty + ops taxonomy",
+      "priority": 0
+    },
+    {
+      "agent": "Zagan",
+      "title": "Shared create counter",
+      "action": "Or stop global-sounding remaining_creates",
+      "priority": 0
+    },
+    {
+      "agent": "Kenji",
+      "title": "Thin product OK",
+      "action": "No fake case studies",
+      "priority": 1
+    },
+    {
+      "agent": "Raj",
+      "title": "HonestyGuard brochure",
+      "action": "Fail if pretend KV",
+      "priority": 0
+    },
+    {
+      "agent": "Rex",
+      "title": "Market facts only",
+      "action": "Hose + lock + live user.me",
+      "priority": 0
+    },
+    {
+      "agent": "Helios",
+      "title": "Imprint hunt",
+      "action": "One stranger sentence on wall",
+      "priority": 0
+    },
+    {
+      "agent": "Zagan",
+      "title": "Second connector",
+      "action": "mcp-http-bridge template",
+      "priority": 1
+    },
+    {
+      "agent": "Nova",
+      "title": "Autoresearch DEEPEN",
+      "action": "Until stranger imprint",
+      "priority": 1
+    }
+  ],
+  "recommendation": "Stranger imprint is the only scoreboard. Ship encyclopedia pack + hunt automation. Ops seeds never count."
+}
