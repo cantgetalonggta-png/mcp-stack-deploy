@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AgentBridge Beta 0.2 — Dashboard</title>
+<style>
+:root{--bg:#0B1220;--card:#111827;--line:#334155;--teal:#14B8A6;--amber:#F59E0B;--text:#e2e8f0;--muted:#94a3b8}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--text)}
+a{color:var(--teal)}header{padding:2rem 1.25rem;border-bottom:1px solid var(--line);background:#070b14}
+.wrap{max-width:1100px;margin:0 auto;padding:1.25rem}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:.75rem;padding:1rem}
+h1{margin:.2rem 0;font-size:1.75rem}h2{font-size:1.05rem;margin:.2rem 0 .6rem;color:var(--teal)}
+.chip{display:inline-flex;gap:.4rem;align-items:center;padding:.35rem .8rem;border-radius:999px;background:#0f172a;font-family:ui-monospace,monospace;font-size:.75rem}
+.dot{width:.55rem;height:.55rem;border-radius:50%;background:#94a3b8}.chip.green .dot{background:#22c55e}.chip.red .dot{background:#ef4444}.chip.yellow .dot{background:#eab308}
+table{width:100%;border-collapse:collapse;font-size:.85rem}td,th{border-bottom:1px solid var(--line);padding:.45rem;text-align:left;vertical-align:top}
+.btn{display:inline-block;background:var(--teal);color:#042f2e;font-weight:700;text-decoration:none;padding:.55rem .9rem;border-radius:.45rem;margin:.15rem}
+.btn-amber{background:var(--amber);color:#1c1917}.muted{color:var(--muted);font-size:.85rem}
+code{background:#1e293b;padding:.1rem .35rem;border-radius:.25rem;font-size:.8rem}
+pre{background:#0f172a;padding:.75rem;border-radius:.5rem;overflow:auto;font-size:.72rem;border:1px solid var(--line)}
+.badge{display:inline-block;background:#14532d;color:#bbf7d0;font-size:.7rem;padding:.15rem .45rem;border-radius:.3rem;margin-left:.35rem}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="muted">SKU Beta · multi-agent · skills wired · live probes</div>
+<h1>AgentBridge Beta <span class="badge">0.2.0</span></h1>
+<p class="muted">HTTP MCP glue. Hose + lock + live <code>user.me</code>. Not Zapier. Not an LLM. BYO keys. Autonomous marketing + sales + research + debate teams.</p>
+<a class="btn" href="https://manus-mcp-bridge-olive.vercel.app/health" target="_blank" rel="noopener">/health</a>
+<a class="btn" href="https://manus-mcp-bridge-olive.vercel.app/eval" target="_blank" rel="noopener">/eval</a>
+<a class="btn btn-amber" href="https://agentbridge-launch.vercel.app/imprint" target="_blank" rel="noopener">Imprint wall</a>
+<a class="btn" href="https://github.com/cantgetalonggta-png/mcp-stack-deploy" target="_blank" rel="noopener">Repo</a>
+<div id="chip" class="chip" style="margin-top:.8rem"><span class="dot"></span><span id="chipText">probing…</span></div>
+</div>
+</header>
+<main class="wrap">
+<section class="grid">
+<div class="card"><h2>Live status</h2><div id="livebox" class="muted">loading</div></div>
+<div class="card"><h2>Success criteria</h2>
+<ul class="muted">
+<li>Outside unique imprint (non-ops)</li>
+<li>/eval pass + green chip</li>
+<li>Beta dashboard public</li>
+<li>Debates + proposals archived</li>
+</ul></div>
+<div class="card"><h2>Teams online</h2>
+<p class="muted">marketing · product_sales · debate · research · ops</p>
+<p><code>python main.py teams</code> · <code>python main.py debates</code> · <code>python main.py build</code></p></div>
+<div class="card"><h2>Bridge honesty</h2>
+<p class="muted">remaining_creates_scope=<b>instance-best-effort</b> until shared KV. Hosted $99 does not invent durable store.</p></div>
+</section>
+
+<section class="card" style="margin-top:1rem">
+<h2>Skills wired (Beta)</h2>
+<pre id="skills">code-evolution · comedian-persona-debate · deployment-automation · knowledge-base-builder · multi-agent-tooling · public-dataset-discovery · python-pep8-code-reviewer · self-dev-resources · rex-export-x5-master · autoresearch · api-integration-master · api-key-management · llm-orchestration · metrics-self-healing · multi-agent-patterns · multi-agent-project-structure · mcp-http-bridge · manus-api · agentbridge-launch · stack-distill-mcp-agentbridge</pre>
+</section>
+
+<section class="grid" style="margin-top:1rem">
+<div class="card"><h2>Marketing proposals</h2><pre id="mkt">run build to fill</pre></div>
+<div class="card"><h2>Sales proposals</h2><pre id="sales">run build to fill</pre></div>
+</section>
+
+<section class="card" style="margin-top:1rem">
+<h2>Debate archive</h2>
+<p class="muted">10-min heated unhinged + 10-min product implementation discussion. Kenji: FUCKIN ASS-HOLE!! · Raj: YOU BASTARD... FUCKING GUY!! · Rex: factual asshole.</p>
+<p><a href="debates/heated-unhinged-10min.md">heated-unhinged-10min.md</a> · <a href="debates/product-discussion-10min.md">product-discussion-10min.md</a></p>
+<pre id="dprops"></pre>
+</section>
+
+<section class="card" style="margin-top:1rem">
+<h2>Autoresearch loop</h2>
+<p class="muted">experiment → synthesize → steer · dry_run default · loop_cap 5 · Manus bridge live</p>
+<pre id="research">H1: eval honesty → imprint rate
+H2: compare table > feature lists
+H3: debate archive signals seriousness</pre>
+</section>
+
+<section class="card" style="margin-top:1rem">
+<h2>Dashboard code view (what the agent sees)</h2>
+<pre id="rawdash">// filled by client probe
+</pre>
+</section>
+</main>
+<script>
+async function probe(){
+  const chip=document.getElementById('chip');
+  const text=document.getElementById('chipText');
+  const live=document.getElementById('livebox');
+  const raw=document.getElementById('rawdash');
+  try{
+    const [h,e]=await Promise.all([
+      fetch('https://manus-mcp-bridge-olive.vercel.app/health').then(r=>r.json()),
+      fetch('https://manus-mcp-bridge-olive.vercel.app/eval').then(r=>r.json())
+    ]);
+    const color=e.chip||h.chip||'gray';
+    chip.className='chip '+color;
+    text.textContent=`${h.service||'bridge'} v${h.version} · chip ${color} · eval ${e.pass?'PASS':'FAIL'} · creates ${h.remaining_creates} (${h.remaining_creates_scope})`;
+    live.innerHTML=`<div>health ok: <b>${h.ok}</b></div><div>user.me: <b>${h.user_me_ok}</b> (${h.user_me_status})</div><div>credits_ok: <b>${h.credits_ok}</b></div><div>degrade: <b>${h.degrade_label}</b></div>`;
+    raw.textContent=JSON.stringify({health:h,eval:e,ts:new Date().toISOString()},null,2);
+  }catch(err){
+    chip.className='chip red'; text.textContent='probe failed'; live.textContent=String(err);
+  }
+}
+probe();
+// embed static proposal snapshots if present beside page
+fetch('reports/marketing-proposals.json').then(r=>r.json()).then(d=>{
+  document.getElementById('mkt').textContent=JSON.stringify(d.proposals?.slice(0,4)||d,null,2);
+}).catch(()=>{});
+fetch('reports/sales-proposals.json').then(r=>r.json()).then(d=>{
+  document.getElementById('sales').textContent=JSON.stringify(d.proposals?.slice(0,4)||d,null,2);
+}).catch(()=>{});
+fetch('reports/debate-product-proposals.json').then(r=>r.json()).then(d=>{
+  document.getElementById('dprops').textContent=JSON.stringify(d,null,2);
+}).catch(()=>{});
+</script>
+</body>
+</html>

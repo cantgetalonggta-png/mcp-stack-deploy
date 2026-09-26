@@ -1,0 +1,7 @@
+{
+  "experiment_id": "H1-imprint-path",
+  "hypothesis": "H1",
+  "status": "protocol_locked",
+  "metric_value": null,
+  "note": "Await outside imprint; do not fabricate metric"
+}

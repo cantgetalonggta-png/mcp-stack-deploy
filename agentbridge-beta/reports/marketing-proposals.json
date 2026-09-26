@@ -1,0 +1,55 @@
+{
+  "ts": "2026-09-26T01:18:40.821553+00:00",
+  "team": "marketing",
+  "proposals": [
+    {
+      "agent": "HookLead",
+      "title": "Honest hose, not vapor",
+      "action": "Lead with live /eval green chip + remaining_creates honesty",
+      "channel": "landing + imprint wall + X/GitHub",
+      "metric": "CTR to imprint wall",
+      "priority": 1
+    },
+    {
+      "agent": "ChannelScout",
+      "title": "Builder channels only",
+      "action": "Target key owners only (HN, IH, Cursor, MCP dirs)",
+      "channel": "community posts with eval link",
+      "metric": "qualified imprint issues",
+      "priority": 1
+    },
+    {
+      "agent": "ImprintHunter",
+      "title": "One stranger sentence",
+      "action": "Ship wall + one-pager + gist; ask ONE honest sentence",
+      "channel": "imprint wall",
+      "metric": "non-ops imprint count >= 1",
+      "priority": 0
+    },
+    {
+      "agent": "CarlinCritic",
+      "title": "Language audit",
+      "action": "Kill AI-platform fluff. Say hose + lock + live user.me",
+      "channel": "copy rewrite",
+      "metric": "jargon ratio down",
+      "priority": 2
+    },
+    {
+      "agent": "HookLead",
+      "title": "Beta badge",
+      "action": "Publish Beta 0.2 dashboard with skills + debates",
+      "channel": "beta dashboard",
+      "metric": "dashboard uniques",
+      "priority": 1
+    },
+    {
+      "agent": "ChannelScout",
+      "title": "Compare table push",
+      "action": "Surface compare.html vs DIY / agency / multi-source",
+      "channel": "compare page",
+      "metric": "compare -> lead form",
+      "priority": 2
+    }
+  ],
+  "recommendation": "Prioritize ImprintHunter + live eval proof over brand fluff. One honest outside mark beats ten fake testimonials."
+}

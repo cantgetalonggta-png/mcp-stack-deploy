@@ -1,0 +1,14 @@
+# research-state.yaml
+project: 'AgentBridge Beta imprint + conversion'
+question: 'What minimal public proof converts a key-owning builder into one honest imprint?'
+hypotheses:
+  - id: H1
+    text: 'Live /eval green + creates honesty increases imprint rate'
+  - id: H2
+    text: 'Compare table vs DIY/agency pricing beats feature lists'
+  - id: H3
+    text: 'Debate archive + beta dashboard signals seriousness'
+metric: non_ops_imprint_count
+baseline: 0
+phase: bootstrap
+ts: 2026-09-26T01:18:41.672500+00:00

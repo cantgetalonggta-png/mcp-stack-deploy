@@ -1,0 +1,73 @@
+{
+  "ts": "2026-09-26T01:17:10.604120+00:00",
+  "team": "product_sales",
+  "proposals": [
+    {
+      "agent": "OfferArchitect",
+      "sku": "Starter",
+      "price": 1499,
+      "include": [
+        "1-2 tools",
+        "client pack",
+        "health plane",
+        "5-day path"
+      ],
+      "exclude": [
+        "raw Manus key access",
+        "unlimited creates",
+        "fake KV"
+      ]
+    },
+    {
+      "agent": "OfferArchitect",
+      "sku": "Standard",
+      "price": 2499,
+      "include": [
+        "5-10 tools",
+        "runbook",
+        "eval gate",
+        "auth allowlist"
+      ],
+      "exclude": [
+        "selling operator credits"
+      ]
+    },
+    {
+      "agent": "OfferArchitect",
+      "sku": "Hosted",
+      "price": 99,
+      "period": "mo",
+      "include": [
+        "uptime",
+        "token rotation help",
+        "eval"
+      ],
+      "note": "Do NOT sell KV until shared store is real (remaining_creates_scope=instance-best-effort)"
+    },
+    {
+      "agent": "ObjectionKiller",
+      "objection": "Why not Zapier/n8n?",
+      "rebuttal": "Those are general automation. This is HTTP MCP for agent clients with Bearer lock + upstream allowlist + live user.me chip."
+    },
+    {
+      "agent": "ObjectionKiller",
+      "objection": "Can I use your Manus key?",
+      "rebuttal": "No. BYO keys. We sell the hose pattern, not unmetered access."
+    },
+    {
+      "agent": "SlotCloser",
+      "action": "Lead form opens GitHub [lead] issue \u2014 public trail, 24h reply SLA",
+      "cta": "Get a slot on landing #buy"
+    },
+    {
+      "agent": "HonestyGuard",
+      "flags": [
+        "remaining_creates_scope is instance-best-effort until shared KV",
+        "Hosted $99 does not include pretend durable store",
+        "No fabricated case studies on brochure or site",
+        "Ops imprint seeds must not be counted as stranger imprints"
+      ]
+    }
+  ],
+  "recommendation": "Close on proof (eval green) not hype. Price is fixed-path delivery of gateway pattern."
+}
