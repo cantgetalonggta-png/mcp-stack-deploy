@@ -1,0 +1,35 @@
+{
+  "ts": "2026-09-26T03:45:34.236628+00:00",
+  "rule": "directive-always-upload-mp3-to-google-drive LOCKED",
+  "folder_primary": {
+    "id": "1ZxqtwHMdoTT-eAe8jO2XR5nCvvpyDTeb",
+    "name": "AgentBridge-Audio",
+    "url": "https://drive.google.com/drive/folders/1ZxqtwHMdoTT-eAe8jO2XR5nCvvpyDTeb"
+  },
+  "files": [
+    {
+      "name": "helios-zagan-heated-debate.mp3",
+      "bytes": 474048,
+      "drive_file_ids": [
+        "1aZGdi6YsMyydBUBBL-TxwKMXrRrMcLzA",
+        "1WW7qI7gztPkwvCxb3sTuySAifozQjB8m"
+      ],
+      "links": [
+        "https://drive.google.com/file/d/1aZGdi6YsMyydBUBBL-TxwKMXrRrMcLzA/view",
+        "https://drive.google.com/file/d/1WW7qI7gztPkwvCxb3sTuySAifozQjB8m/view"
+      ]
+    },
+    {
+      "name": "helios-zagan-product-discussion.mp3",
+      "bytes": 278784,
+      "drive_file_ids": [
+        "1hbUw8eD3x0bEqaoyXChRGIpKxcRZ5xwZ",
+        "12GjrF0xaIM_niMbSWeJKL669KXShWYFJ"
+      ],
+      "links": [
+        "https://drive.google.com/file/d/1hbUw8eD3x0bEqaoyXChRGIpKxcRZ5xwZ/view",
+        "https://drive.google.com/file/d/12GjrF0xaIM_niMbSWeJKL669KXShWYFJ/view"
+      ]
+    }
+  ]
+}

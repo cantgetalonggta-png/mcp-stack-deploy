@@ -1,7 +1,17 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "skills": [
+    "agent-analyzer",
+    "agent-beautification",
+    "agent-code-execution",
+    "agent-debug",
+    "agent-developer",
+    "agent-inferencer",
+    "agent-layout-design",
+    "agent-ontologist",
+    "agent-security-defensive",
     "agent-task-design",
+    "agent-upgrader",
     "agentbridge-launch",
     "aggressive-debate-persona",
     "aggressive-logic-combat",
@@ -18,6 +28,7 @@
     "deployment-activation-schedule-subprocess",
     "deployment-automation",
     "deployment-boundary",
+    "directive-always-upload-mp3-to-google-drive",
     "documentation-only-boundary",
     "executive-summary",
     "fact-checking",
@@ -116,5 +127,20 @@
     "helios-zagan-product-discussion.mp3",
     "heated-unhinged-debate.mp3",
     "product-discussion.mp3"
+  ],
+  "permanent_rules": [
+    "directive-always-upload-mp3-to-google-drive"
+  ],
+  "advanced_agents": [
+    "agent-upgrader",
+    "agent-ontologist",
+    "agent-inferencer",
+    "agent-analyzer",
+    "agent-developer",
+    "agent-debug",
+    "agent-code-execution",
+    "agent-beautification",
+    "agent-security-defensive",
+    "agent-layout-design"
   ]
 }
