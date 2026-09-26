@@ -1,0 +1,6 @@
+{
+  "manus_bridge_live": true,
+  "elevenlabs_secret_in_chat_sandbox": false,
+  "elevenlabs_test": "workflow_dispatch elevenlabs-tts-kenji",
+  "stranger_imprints": 0
+}
