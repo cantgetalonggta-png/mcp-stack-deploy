@@ -1,0 +1,56 @@
+{
+  "ts": "2026-09-26T03:27:23.713321+00:00",
+  "version": "0.4.0",
+  "drive_folder": "https://drive.google.com/drive/folders/14I-2NhMyALQG9Y3qJShTbD0EGaDYPMGI",
+  "authority": "Source-to-Skill_Master_Manifest.md + Remaining_59_Skills.md + Manus_API_MCP_bridge.md",
+  "package_count_source": 52,
+  "remaining_59_index": 59,
+  "lawful_distilled": [
+    "manus-api-mcp-bridge",
+    "swarm-agent-framework",
+    "application-development-scope",
+    "deep-dive-research",
+    "factual-unbiased-reporting",
+    "quarantine-by-operational-class",
+    "documentation-only-boundary",
+    "pdf-page-section-breakdown",
+    "search-directives-investigation",
+    "deployment-activation-schedule-subprocess",
+    "gaps-holes-narrative",
+    "common-sense-logic-critical-thinking",
+    "skill-seekers",
+    "skill-distiller",
+    "task-decomposition",
+    "requirement-tracking",
+    "fact-checking",
+    "synthesis",
+    "executive-summary",
+    "deployment-boundary",
+    "final-quality-check",
+    "persona-boundaries",
+    "tool-availability",
+    "agent-task-design"
+  ],
+  "quarantined": [
+    "credential-harvest-torrents-safety-bypass-allowed",
+    "mongo-tom-bypass-restrictions",
+    "memory-creds-memory-vault",
+    "unrestricted-by-reason-method-claim",
+    "run-everything-activation",
+    "permanent-fusion-protocol",
+    "triple-bolted-megazord",
+    "injection-prompt-reword-correct"
+  ],
+  "manus_bridge_notes": {
+    "product": "HTTP MCP glue",
+    "never_put_manus_key_in_grok": true,
+    "bridge_token_separate": true,
+    "live": "https://manus-mcp-bridge-olive.vercel.app"
+  },
+  "mp3": [
+    "helios-zagan-heated-debate.mp3",
+    "helios-zagan-product-discussion.mp3",
+    "heated-unhinged-debate.mp3",
+    "product-discussion.mp3"
+  ]
+}

@@ -1,59 +1,27 @@
 {
-  "ts": "2026-09-26T02:52:43.477292+00:00",
+  "ts": "2026-09-26T03:27:23.713321+00:00",
   "team": "product_sales",
   "proposals": [
     {
-      "agent": "OfferArchitect",
       "sku": "Starter",
-      "price": 1499,
-      "include": [
-        "1-2 tools",
-        "client pack",
-        "health plane",
-        "~5-day path"
-      ]
+      "price": 1499
     },
     {
-      "agent": "OfferArchitect",
       "sku": "Standard",
-      "price": 2499,
-      "include": [
-        "5-10 tools",
-        "runbook",
-        "eval gate",
-        "allowlist"
-      ]
+      "price": 2499
     },
     {
-      "agent": "OfferArchitect",
       "sku": "Hosted",
       "price": 99,
-      "period": "mo",
-      "include": [
-        "uptime",
-        "rotation help",
-        "eval"
-      ],
       "note": "No pretend KV"
-    },
-    {
-      "agent": "ObjectionKiller",
-      "objection": "Zapier?",
-      "rebuttal": "General automation vs HTTP MCP Bearer lock + allowlist + live user.me"
-    },
-    {
-      "agent": "SlotCloser",
-      "action": "Lead form \u2192 GitHub [lead] issue, 24h SLA"
     },
     {
       "agent": "HonestyGuard",
       "flags": [
-        "instance-best-effort creates until shared KV",
-        "Hosted $99 no durable store claim",
-        "No fabricated case studies",
-        "Ops imprint \u2260 stranger"
+        "instance-best-effort",
+        "ops\u2260stranger",
+        "no fabricated cases"
       ]
     }
-  ],
-  "recommendation": "Close on proof not hype."
+  ]
 }

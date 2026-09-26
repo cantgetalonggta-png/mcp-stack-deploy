@@ -1,37 +1,32 @@
 {
-  "ts": "2026-09-26T02:52:42.970975+00:00",
+  "ts": "2026-09-26T03:27:23.713321+00:00",
   "team": "marketing",
   "proposals": [
     {
       "agent": "ImprintHunter",
-      "title": "Outside mark",
-      "action": "Reduce wall friction; keep GitHub human confirm; public share of one-pager + eval chip",
+      "action": "Keep wall + eval chip public; stranger scoreboard only",
       "priority": 0
     },
     {
       "agent": "HookLead",
-      "title": "Live proof",
-      "action": "Lead with /eval PASS + remaining_creates honesty",
+      "action": "Lead with hose+lock+live user.me; instance-best-effort honesty",
       "priority": 0
     },
     {
-      "agent": "ChannelScout",
-      "title": "Builders only",
-      "action": "HN/IH/Cursor/MCP dirs with eval link",
-      "priority": 1
-    },
-    {
       "agent": "CarlinCritic",
-      "title": "Language",
-      "action": "Hose + lock + live user.me \u2014 no platform fluff",
+      "action": "Kill AI-platform fluff after Drive language audit",
       "priority": 1
     },
     {
       "agent": "Helios",
-      "title": "Zero fake social proof",
-      "action": "Scoreboard = stranger imprints only",
+      "action": "Burn fake testimonials",
       "priority": 0
+    },
+    {
+      "agent": "skill-distiller",
+      "action": "Lawful Drive pack published; quarantine listed",
+      "priority": 1
     }
   ],
-  "recommendation": "Hunt one honest outside sentence. Everything else is choir."
+  "recommendation": "Hunt one honest outside imprint. Do not invent one."
 }
