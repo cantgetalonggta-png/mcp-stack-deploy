@@ -69,11 +69,15 @@ table{width:100%;border-collapse:collapse;font-size:.85rem}td,th{border-top:1px 
 </main>
 <script>
 const H='https://manus-mcp-bridge-olive.vercel.app';
-async function j(u){const r=await fetch(u,{cache:'no-store'});return r.json()}
+async function j(u){const r=await fetch(u,{cache:'no-store'}); if(!r.ok) throw new Error(u+' '+r.status); return r.json()}
 (async()=>{
   let health=null,ev=null,err=null;
   try{ [health,ev]= await Promise.all([j(H+'/health?ts='+Date.now()), j(H+'/eval?ts='+Date.now())]); }
-  catch(e){err=String(e)}
+  catch(e){
+    err=String(e);
+    try{ health=await j('reports/live-health.json'); ev=await j('reports/live-eval.json'); err=(err||'')+' · using snapshot reports'; }
+    catch(e2){ err=String(e2); }
+  }
   const chip=(ev&&ev.chip)||(health&&health.chip)||'gray';
   const el=document.getElementById('chip');
   el.className='chip '+(chip==='green'?'ok':chip==='red'?'bad':chip==='yellow'?'warn':'');
