@@ -1,8 +1,12 @@
 {
-  "builds": [
-    { "src": "server.py", "use": "@vercel/python" }
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/server.py" }
   ],
-  "routes": [
-    { "src": "/(.*)", "dest": "server.py" }
-  ]
+  "functions": {
+    "server.py": {
+      "maxDuration": 30,
+      "memory": 1024
+    }
+  }
 }
