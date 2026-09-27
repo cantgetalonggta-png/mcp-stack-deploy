@@ -1,44 +1,26 @@
 # manus-mcp-bridge deploy notes
 
-## Warning you saw
+## Required Vercel project wiring (human once)
 
-```
-Due to `builds` existing in your configuration file, the Build and Development
-Settings defined in your Project Settings will not apply.
-```
+Project **manus-mcp-bridge** under team **echo-ec69** MUST:
 
-**Cause:** Legacy `vercel.json` used `builds` + `routes` (old builder API).
+1. Git repository: `cantgetalonggta-png/mcp-stack-deploy` (NOT ma-os-12-console)
+2. Root Directory: `manus-mcp-bridge`
+3. Deployment Protection → Vercel Authentication: **Off** (public /health /eval)
+4. Env (Sensitive as needed):
+   - `BRIDGE_TOKEN` (optional; empty = open bridge tools)
+   - `MANUS_API_KEY` (optional; without it degrade_label=no_key_local_only)
 
-**Fix:** `vercel.json` now uses `rewrites` + `functions` only (no `builds`).
+Wrong-repo deploys from ma-os-12-console pushes will ERROR.
 
-## URLs
+## Public endpoints
 
-| Kind | URL |
-|------|-----|
-| Deployment you pasted | https://manus-mcp-bridge-mq9c133dh-echo-ec69.vercel.app |
-| Latest READY (sha b87b4b…) | https://manus-mcp-bridge-bd1qf2exs-echo-ec69.vercel.app |
-| Production alias (if assigned) | set in Vercel → Domains |
+- `GET /` — index
+- `GET /health` — probe + chip
+- `GET /eval` — pass/fail checks
+- `GET /research?phase=experiment|synthesize|steer` — autoresearch cycle (dry)
+- `GET|POST /mcp` — MCP tool list / dispatch (auth if BRIDGE_TOKEN set)
 
-## SSO / 302 to vercel.com/login
+## Version
 
-Deployment Protection is ON. Unauthenticated curl gets 302 → Vercel login.
-
-**To make API public (optional):**
-Vercel → Project **manus-mcp-bridge** → Settings → Deployment Protection → disable or allow public for production.
-
-## Wrong-repo ERROR
-
-A deploy of `ma-os-12-console` commit `6616f4ca` hit **manus-mcp-bridge** and failed.
-Keep git links separate:
-
-| Vercel project | Git repo | Root Directory |
-|----------------|----------|----------------|
-| `manus-mcp-bridge` | `cantgetalonggta-png/mcp-stack-deploy` | `manus-mcp-bridge` |
-| `ma-os-12-console` | `cantgetalonggta-png/ma-os-12-console` | `.` (repo root) |
-
-## Secrets (vault only — not chat)
-
-In Vercel env for this project only:
-- `BRIDGE_TOKEN` (encrypted)
-- `MANUS_API_KEY` (encrypted) if you use Manus API
-- never commit them
+1.4.0 — research_steer expanded with experiment → synthesize → steer phases.
